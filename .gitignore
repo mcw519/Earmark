@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# Windows / Linux desktop cruft
+Thumbs.db
+Desktop.ini
+.directory
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local scratch: sample audio and exports kept next to the tool while working
+/scratch/
+*.spans.json
+*.spans.csv
