@@ -2,6 +2,9 @@
 
 [English](README.md) · **繁體中文**
 
+[![Latest release](https://img.shields.io/github/v/release/mcw519/Earmark)](https://github.com/mcw519/Earmark/releases/latest)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 單一檔案的音訊區段標註工具。用瀏覽器打開 `earmark.html`，在波形上圈出時間區段，
 貼標籤、寫註記、匯出。解碼、波形、頻譜、重採樣、匯出全部在分頁裡完成：音訊不會離開你的電腦，
 也沒有建置流程、沒有伺服器、沒有相依套件。
@@ -11,9 +14,13 @@
 
 ![Earmark 標註一個語音資料夾](docs/earmark.png)
 
-## 開始使用
+## 下載
 
-用瀏覽器打開 `earmark.html`，安裝就這樣而已。
+**[earmark.html](https://github.com/mcw519/Earmark/releases/latest/download/earmark.html)**
+— 就這一個檔案。用瀏覽器打開就能用：不用建置、不用伺服器、沒有相依套件、
+不需要安裝任何東西。
+
+## 開始使用
 
 1. **載入音訊。** 把檔案或整個資料夾拖進視窗，或用 *File ▸ Open folder…*。
    資料夾會**取代**目前的工作區——如果這會丟掉已標註的區段會先跳出確認——拖零散檔案則是加進去。

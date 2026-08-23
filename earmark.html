@@ -617,6 +617,7 @@ td select:focus,td input:focus{border-color:var(--accent);background:var(--sunk)
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const clamp = (v,a,b) => v<a?a:v>b?b:v;
+const VERSION="1.0.0";
 const AUDIO_BTNS=["play","stop","loop","playSel","zfit","norm","zoom"];
 const AUDIO_RE=/\.(wav|wave|flac|mp3|ogg|oga|opus|m4a|mp4|aac|aif|aiff|aifc|caf|webm)$/i;
 const SPANF_RE=/\.(json|csv|txt|tsv)$/i;
@@ -2069,6 +2070,7 @@ function buildExport(){
       annotated_files:list.length,
       spans_total:list.reduce((n,f)=>n+f.spans.length,0),
       generated_by:"Earmark",
+      version:VERSION,
       files:list.map(f=>({...fileMeta(f),path:f.path,spans:spanRows(f)}))},null,2);
   }
   if(fmtSel==="csv"){
@@ -2384,7 +2386,7 @@ const ACT={
     toast(`Downloaded ${nm} · ${S.workSR.toLocaleString()} Hz`);
   },
   shortcuts:()=>$("#scModal").classList.remove("hidden"),
-  about:()=>ask("Earmark","A single-file audio span annotator. Everything — decoding, waveform, spectrogram, export — happens in this browser tab; no audio ever leaves the machine.",[{label:"Close",value:1,primary:true}]),
+  about:()=>ask(`Earmark v${VERSION}`,"A single-file audio span annotator. Everything — decoding, waveform, spectrogram, export — happens in this browser tab; no audio ever leaves the machine.",[{label:"Close",value:1,primary:true}]),
 };
 document.addEventListener("click",e=>{
   const b=e.target.closest("[data-act]"); if(!b||b.disabled)return;

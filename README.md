@@ -2,6 +2,9 @@
 
 **English** · [繁體中文](README.zh-TW.md)
 
+[![Latest release](https://img.shields.io/github/v/release/mcw519/Earmark)](https://github.com/mcw519/Earmark/releases/latest)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A single-file audio span annotator. Open `earmark.html` in a browser and mark time spans on a
 waveform — tag them, label them, export them. Decoding, waveform, spectrogram, resampling and
 export all happen in the tab: no audio leaves the machine, and there is no build step, no
@@ -12,9 +15,13 @@ processing and which must be attenuated — but it works as a general span annot
 
 ![Earmark annotating a folder of speech files](docs/earmark.png)
 
-## Getting started
+## Download
 
-Open `earmark.html` in a browser. That is the whole install.
+**[earmark.html](https://github.com/mcw519/Earmark/releases/latest/download/earmark.html)**
+— one file. Open it in a browser and you are done: no build step, no server,
+no dependencies, nothing to install.
+
+## Getting started
 
 1. **Load audio.** Drag files or a folder onto the window, or use *File ▸ Open folder…*.
    A folder replaces the working set — it asks first if that would discard spans — while
