@@ -5,6 +5,8 @@
 [![Latest release](https://img.shields.io/github/v/release/mcw519/Earmark)](https://github.com/mcw519/Earmark/releases/latest)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+**[Open Earmark online](https://mcw519.github.io/Earmark/)**
+
 A single-file audio span annotator. Open `earmark.html` in a browser and mark time spans on a
 waveform — tag them, label them, export them. Decoding, waveform, spectrogram, resampling and
 export all happen in the tab: no audio leaves the machine, and there is no build step, no
@@ -118,8 +120,8 @@ Importing a span file creates any tags it references. *Reset* restores the built
 - The `<link>` to Google Fonts at the top of the file is optional — it supplies Spectral and
   IBM Plex when online. Delete that one line for a fully offline file; the fallback stacks take
   over.
-- `localStorage` is per-origin, so opening from disk (`file://`) and through a local server are
-  separate stores for tags, layout and theme.
+- Tags, layout and theme are stored per origin in `localStorage`. GitHub Pages, a local server
+  and opening from disk (`file://`) each have their own settings.
 - Writing sidecars into a folder needs the File System Access API (Chromium). Elsewhere a folder
   loads read-only and you export by download instead.
 - Imported spans are trimmed to the audio length, and any starting past the end are dropped —

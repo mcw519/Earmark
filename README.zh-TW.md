@@ -5,6 +5,8 @@
 [![Latest release](https://img.shields.io/github/v/release/mcw519/Earmark)](https://github.com/mcw519/Earmark/releases/latest)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+**[在瀏覽器開啟 Earmark](https://mcw519.github.io/Earmark/)**
+
 單一檔案的音訊區段標註工具。用瀏覽器打開 `earmark.html`，在波形上圈出時間區段，
 貼標籤、寫註記、匯出。解碼、波形、頻譜、重採樣、匯出全部在分頁裡完成：音訊不會離開你的電腦，
 也沒有建置流程、沒有伺服器、沒有相依套件。
@@ -107,8 +109,8 @@ FFT 跑在 worker 裡，所以縮放和平移時畫面不會卡住，頻譜會�
 
 - 檔案開頭那行 Google Fonts 的 `<link>` 是可選的——連線時它提供 Spectral 與 IBM Plex 字體。
   想要完全離線就把那一行刪掉，`:root` 裡的備援字體會接手。
-- `localStorage` 是綁 origin 的，所以從硬碟直接開（`file://`）和透過本機伺服器開，
-  標籤、版面、主題會是兩份各自獨立的資料。
+- 標籤、版面和主題會按 origin 存在 `localStorage`。GitHub Pages、本機伺服器和直接從硬碟開啟（`file://`）
+  各有獨立的設定。
 - 把區段寫回資料夾需要 File System Access API（Chromium）。其他瀏覽器上資料夾是唯讀載入，
   改用下載的方式匯出。
 - 匯入的區段會被裁到音檔長度之內，起點超出結尾的會被丟棄——否則它們會停在時間軸外面，
